@@ -5,21 +5,19 @@ Created on Thu Jul  2 14:27:17 2020
 @author: DAVID CAIZALUISA
 """
 
-def isYearLeap(year):
- año=int(input('Introduce un año: '))
 
- if año % 4 == 0:
-    if año % 100 == 0:
-        if año % 400 == 0:
-            print('TRUE')
-        else:
-            print('FALSE')
+def isYearLeap(year):
+    if year % 4 == 0:
+            return False
+    elif year % 100!= 0 :
+            return True
+    elif year % 400!= 0:
+        return False
     else:
-        print('TRUE')
- else:
-    print('FALSE')
-    
-    
+         return True
+y=isYearLeap(1987)
+print(y)
+
 testData = [1900, 2000, 2016, 1987]
 testResults = [False, True, True, False]
 for i in range(len(testData)):
